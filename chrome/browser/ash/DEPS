@@ -1,0 +1,21 @@
+include_rules = [
+  # See README.md.
+  "+ash",
+
+  "+components/guest_os",
+  "+dbus",
+
+  # For logging via the CD_LOG macro.
+  "+components/cross_device/logging/logging.h",
+
+  # ChromeOS should not depend on //chrome. See //docs/chromeos/code.md for
+  # details.
+  "-chrome",
+]
+
+specific_include_rules = {
+  # TODO(b:365464070): Remove once the test is moved.
+  'proxy_config_service_impl_unittest.cc': [
+    "+chrome/browser/ash/settings/scoped_cros_settings_test_helper.h",
+  ]
+}

@@ -1,0 +1,6 @@
+AXWebArea
+++AXGroup AXDescription='label'
+++AXGroup accessibilityCustomContent=[{label: 'description', value: 'description'}]
+++AXGroup AXDescription='title'
+++AXGroup
+++++AXStaticText AXValue='description'
